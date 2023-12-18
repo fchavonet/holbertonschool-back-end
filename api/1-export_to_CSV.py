@@ -27,7 +27,7 @@ def fetch_todo_list(employee_id):
         todos_data = todos_response.json()
 
         # Extract user information
-        employee_name = user_data.get("name")
+        employee_name = user_data.get("username")
 
         # Create a CSV file
         csv_file_name = "{}.csv".format(employee_id)
