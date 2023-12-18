@@ -27,7 +27,7 @@ def fetch_todo_list(employee_id):
         todos_data = todos_response.json()
 
         # Extract user information
-        employee_name = user_data.get("username")
+        employee_username = user_data.get("username")
 
         # Create a CSV file
         csv_file_name = "{}.csv".format(employee_id)
@@ -37,7 +37,7 @@ def fetch_todo_list(employee_id):
             # Write task data to CSV
             for task in todos_data:
                 csv_writer.writerow([employee_id,
-                                     employee_name,
+                                     employee_username,
                                      str(task.get("completed")),
                                      task.get("title")])
 
