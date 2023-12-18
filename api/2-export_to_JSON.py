@@ -9,6 +9,7 @@ import json
 import requests
 import sys
 
+
 def fetch_todo_list(employee_id):
     """ Fetch and display TODO list progress for a given employee. """
 
@@ -51,6 +52,7 @@ def fetch_todo_list(employee_id):
     except requests.exceptions.RequestException as e:
         print("Error fetching data: {}".format(e))
         sys.exit(1)
+
 
 # Execute the script if it is the main entry point.
 if __name__ == "__main__":
