@@ -33,10 +33,6 @@ def fetch_todo_list(employee_id):
         csv_file_name = "{}.csv".format(employee_id)
         with open(csv_file_name, mode="w", newline="") as csv_file:
             csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
-            csv_writer.writerow(["USER_ID",
-                                 "USERNAME",
-                                 "TASK_COMPLETED_STATUS",
-                                 "TASK_TITLE"])
 
             # Write task data to CSV
             for task in todos_data:
