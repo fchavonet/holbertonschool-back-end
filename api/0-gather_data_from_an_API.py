@@ -39,7 +39,7 @@ def fetch_todo_list(employee_id):
         num_completed_tasks = len(completed_tasks)
 
         # Print the progress of the employee's TODO list
-        print("Employee {} is done with tasks ({}/{}):"
+        print("Employee {} is done with tasks({}/{}):"
               .format(employee_name, num_completed_tasks, total_tasks))
 
         # Print the titles of completed tasks
