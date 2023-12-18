@@ -39,16 +39,16 @@ def fetch_todo_list(employee_id):
         num_completed_tasks = len(completed_tasks)
 
         # Print the progress of the employee's TODO list
-        print(f"Employee {employee_name} \
-        is done with tasks({num_completed_tasks}/{total_tasks}):")
+        print("Employee {} is done with tasks ({}/{}):"
+              .format(employee_name, num_completed_tasks, total_tasks))
 
         # Print the titles of completed tasks
         for task in completed_tasks:
-            print(f"\t{task.get('title')}")
+            print("\t{}".format(task.get('title')))
 
     # Handle exceptions and print an error message
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data: {e}")
+        print("Error fetching data: {}".format(e))
         sys.exit(1)
 
 
