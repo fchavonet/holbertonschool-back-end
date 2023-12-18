@@ -44,7 +44,7 @@ def fetch_todo_list(employee_id):
 
         # Print the titles of completed tasks
         for task in completed_tasks:
-            print("\t{}".format(task.get('title')))
+            print("\t {}".format(task.get('title')))
 
     # Handle exceptions and print an error message
     except requests.exceptions.RequestException as e:
