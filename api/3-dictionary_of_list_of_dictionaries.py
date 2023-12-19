@@ -46,9 +46,6 @@ def export_todo_data():
         with open(json_file_name, "w") as json_file:
             json.dump(user_dict, json_file)
 
-        # Print success message
-        print(f"Data exported to {json_file_name}")
-
     # Handle exceptions and print an error message
     except requests.exceptions.RequestException as e:
         print("Error fetching data: {}".format(e))
